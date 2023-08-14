@@ -1,0 +1,13 @@
+main {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: justify;
+}
+
+.section-with-image {
+    display: flex;
+}
+
+.section-with-image figure {
+    margin-right: 0;
+}

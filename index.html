@@ -9,6 +9,7 @@
   </head>
   <body>
     <header>
+        <h1>Web Accessibility Showcase</h1>
         <nav>
             <ul>
                 <li><a href="#article-id">Article</a></li>
@@ -18,19 +19,16 @@
         <div class="toggle-switch"></div>
     </header>
     <main>
-        <h1>Web Accessibility Showcase</h1>
         <article id="article-id">
             <h2>Accessible web sites</h2>
-            <p>Creating an accessible web page with only pure HTML is not very hard, as HTML is pretty accessible out of the gate. Still, there are some things to be aware of to ensure a good experience for different users. First, use <strong>semantic HTML elements</strong>. A semantic HTML element is one that communicates some kind of meaning. Using semantic HTML elements helps assistive technologies to interpret the site. For example, heading elements, like <code>h1</code>, <code>h2</code>, <code>h3</code> and so on, provide a clear hierarchy of the page's contents. Using headings over something more generic like a <code>div</code> communicates the purpose of the element directly in the HTML, instead of relying its visual appearance through styling, which is something that e.g. screen reader tools ignore.</p>
+            <p>Creating an accessible web page with only pure HTML is not very hard, as HTML is pretty accessible out of the gate. Still, there are some things to be aware of to ensure a good experience for different users. First, use <strong>semantic HTML elements</strong>. A semantic HTML element is one that communicates some kind of meaning. Using semantic HTML elements helps assistive technologies to interpret the site. For example, heading elements, like <code>h1</code>, <code>h2</code>, <code>h3</code> and so on, provide a clear hierarchy of the page's contents. Using headings over something more generic like a <code>div</code> communicates the purpose of the element directly in the HTML, instead of relying on its visual appearance through styling, which is something that e.g. screen reader tools ignore.</p>
 
-            <div class="section-with-image">
-                <p>Another important thing is to add alternative text for images that describes them. This way, people with poor or no vision or other users of screen reader tools do not miss any information or context that images may convey. To illustrate this, let's talk about the Curb Cut Effect. What it means is that when you make something accessible for people with disabilities, it often also improves the experience many other people. The name comes from when sidewalks were modified to include ramps down to the street level, which was initially done to accomodate wheelchair users but was then found to improve passage for all pedestrians. This article includes an image showing a street crossing with this kind of curb cut.</p>
+            <figure>
+                <img src="timur-m-31aaNFUfNmM-unsplash-400px.jpeg" alt="Street crossing with cut curbs" />
+                <figcaption>Photo by <a href="https://unsplash.com/@tim_front">Timur M</a> on <a href="https://unsplash.com/photos/31aaNFUfNmM">Unsplash</a></figcaption>
+            </figure>    
 
-                <figure>
-                    <img src="timur-m-31aaNFUfNmM-unsplash-400px.jpeg" alt="Street crossing with cut curbs" />
-                    <figcaption>Photo by <a href="https://unsplash.com/@tim_front">Timur M</a> on <a href="https://unsplash.com/photos/31aaNFUfNmM">Unsplash</a></figcaption>
-                </figure>    
-            </div>
+            <p>Another important thing is to add <strong>alternative text for images</strong> that describes them. This way, people with poor or no vision or other users of screen reader tools do not miss any information or context that images may convey. To illustrate this, let's talk about the <strong>Curb Cut Effect</strong>. What it means is that when you make something accessible for people with disabilities, it often also improves the experience for many other people. The name comes from when sidewalks were modified to include ramps down to the street level, which was initially done to accomodate wheelchair users but was then found to improve passage for all pedestrians. This article includes an image showing a street crossing with this kind of curb cut, with appropriate alternative text to clarify the content and purpose of the image.</p>
         </article>
         <form id="form-id"></form>    
     </main>

@@ -1,13 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+header nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+}  
+
 main {
     margin: 0 auto;
     max-width: 600px;
     text-align: justify;
 }
 
-.section-with-image {
-    display: flex;
+figure {
+    float: right;
+    margin-right: 0;
+    width: 50%;
 }
 
-.section-with-image figure {
-    margin-right: 0;
+figure img {
+    width: 100%;
 }

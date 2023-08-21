@@ -12,15 +12,17 @@
         <h1>Web Accessibility Showcase</h1>
         <nav>
             <ul>
-                <li><a href="#article-id">Article</a></li>
-                <li><a href="#form-id">Form</a></li>
+                <li><a href="#article-id">Article: Accessibility on simple websites</a></li>
+                <li><a href="#form-id">Example: Accessible form</a></li>
             </ul>
         </nav>
         <div class="toggle-switch"></div>
     </header>
     <main>
+        <p>This page demonstrates and explains some basic accessibility concepts that are important when developing websites with accessibility in mind. However, it is important to keep in mind that many of the more complex accessibility issues arise when working with JavaScript-heavy sites, like single page applications. This page is pretty simple, with no framework, static HTML and only a little bit of Javascript. A future evolution of this page will also include a React application in which more complex accessibility concepts, such as focus management during client side routing, tab trapping, live regions and storing the active element during page transitions, can be demonstrated.</p>
+
         <article id="article-id">
-            <h2>Accessible web sites</h2>
+            <h2>Accessibility on simple websites</h2>
             <p>Creating an accessible web page with only pure HTML is not very hard, as HTML is pretty accessible out of the gate. Still, there are some things to be aware of to ensure a good experience for different users. First, use <strong>semantic HTML elements</strong>. A semantic HTML element is one that communicates some kind of meaning. Using semantic HTML elements helps assistive technologies to interpret the site. For example, heading elements, like <code>h1</code>, <code>h2</code>, <code>h3</code> and so on, provide a clear hierarchy of the page's contents. Using headings over something more generic like a <code>div</code> communicates the purpose of the element directly in the HTML, instead of relying on its visual appearance through styling, which is something that e.g. screen reader tools ignore.</p>
 
             <figure>
@@ -32,7 +34,7 @@
         </article>
 
         <article id="form-id">
-          <h2>Accessible form</h2>
+          <h2>Example: Accessible form</h2>
 
           <p>Some accessibility aspects that this form includes, most of it 'for free' as long as you use HTML elements properly:</p>
           <ul>

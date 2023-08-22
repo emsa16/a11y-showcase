@@ -1,0 +1,103 @@
+### TOGGLE SWITCH
+
+      <label>
+        Toggle Dark Mode
+        <input onclick="toggle()" id="input" type="checkbox" />
+      </label>
+
+
+    <script>
+      var isLightTheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+      if (!isLightTheme) {
+        document.getElementById("input").checked = true;
+      } else {
+        document.getElementById("input").checked = false;
+      }
+      function toggle() {
+        isLightTheme = !isLightTheme;
+        document.querySelector("main").className = isLightTheme ? "overrideLight" : "overrideDark";
+      }
+    </script>
+
+
+.overrideLight {
+  background: white;
+  color: black;
+}
+
+.overrideDark {
+  background: black;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    background: black;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  main {
+    background: white;
+    color: black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Javascript validation
+
+<script>
+  const form = document.querySelector('form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+
+  form.addEventListener('submit', function(event) {
+    let valid = true;
+
+    // Reset errors
+    nameError.textContent = '';
+    emailError.textContent = '';
+
+    // Perform validation
+    if (nameInput.value.trim() !== 'Emil') {
+      valid = false;
+      nameError.textContent = 'Wrong name.';
+    }
+
+    if (!emailInput.validity.valid || emailInput !== 'emil@top.com') {
+      valid = false;
+      emailError.textContent = 'Wrong email.';
+    }
+
+    if (!valid) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+
+
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+}

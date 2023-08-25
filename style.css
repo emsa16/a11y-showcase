@@ -59,7 +59,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 button {
     display: block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0064d0;
     color: #fff;
     border: none;
     cursor: pointer;

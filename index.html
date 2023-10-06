@@ -12,47 +12,40 @@
         <h1>Web Accessibility Showcase</h1>
         <nav>
             <ul>
-                <li><a href="#article-id">Article: Accessibility on simple websites</a></li>
-                <li><a href="#form-id">Example: Accessible form</a></li>
+                <li><a href="#article-html-markup">Accessibility with HTML markup</a></li>
+                <li><a href="#article-forms">Accessible forms</a></li>
             </ul>
         </nav>
-        <div class="toggle-switch"></div>
     </header>
     <main>
         <p>This page demonstrates and explains some basic accessibility concepts that are important when developing websites with accessibility in mind. However, it is important to keep in mind that many of the more complex accessibility issues arise when working with JavaScript-heavy sites, like single page applications. This page is pretty simple, with no framework, static HTML and only a little bit of Javascript. A future evolution of this page will also include a React application in which more complex accessibility concepts, such as focus management during client side routing, tab trapping, live regions and storing the active element during page transitions, can be demonstrated.</p>
 
-        <article id="article-id">
-            <h2>Accessibility on simple websites</h2>
+        <article id="article-html-markup">
+            <h2>Accessibility with HTML markup</h2>
             <p>Creating an accessible web page with only pure HTML is not very hard, as HTML is pretty accessible out of the gate. Still, there are some things to be aware of to ensure a good experience for different users. First, use <strong>semantic HTML elements</strong>. A semantic HTML element is one that communicates some kind of meaning. Using semantic HTML elements helps assistive technologies to interpret the site. For example, heading elements, like <code>h1</code>, <code>h2</code>, <code>h3</code> and so on, provide a clear hierarchy of the page's contents. Using headings over something more generic like a <code>div</code> communicates the purpose of the element directly in the HTML, instead of relying on its visual appearance through styling, which is something that e.g. screen reader tools ignore.</p>
 
             <figure>
                 <img src="timur-m-31aaNFUfNmM-unsplash-400px.jpeg" alt="Street crossing with cut curbs" />
                 <figcaption>Photo by <a href="https://unsplash.com/@tim_front">Timur M</a> on <a href="https://unsplash.com/photos/31aaNFUfNmM">Unsplash</a></figcaption>
-            </figure>    
+            </figure>
 
             <p>Another important thing is to add <strong>alternative text for images</strong> that describes them. This way, people with poor or no vision or other users of screen reader tools do not miss any information or context that images may convey. To illustrate this, let's talk about the <strong>Curb Cut Effect</strong>. What it means is that when you make something accessible for people with disabilities, it often also improves the experience for many other people. The name comes from when sidewalks were modified to include ramps down to the street level, which was initially done to accomodate wheelchair users but was then found to improve passage for all pedestrians. This article includes an image showing a street crossing with this kind of curb cut, with appropriate alternative text to clarify the content and purpose of the image.</p>
         </article>
 
-        <article id="form-id">
-          <h2>Example: Accessible form</h2>
+        <article id="article-forms">
+          <h2>Accessible forms</h2>
 
-          <p>Some accessibility aspects that this form includes, most of it 'for free' as long as you use HTML elements properly:</p>
-          <ul>
-            <li>Adding <code>&#60;label&#62;</code> elements for all fields to programmatically associate a field with a label</li>
-            <li>Using appropriate input types which automatically provides some validation and custom controls</li>
-            <li>Using form validation with HTML attributes such as <code>required</code>, which automatically validates the form on submission and points out errors.</li>
-            <li>Indicating currently focused element. Focus indication is displayed by default by major browsers, but sometimes it gets turned off by developers because it is seen as ugly. By using the relatively new <code>:focus-visible</code> pseudo class the browser uses some heuristics to determine if focus indication is necessary (e.g. when clicking a button focus indication is not needed, but when keyboard navigating it is).</li>
-          </ul>
+          <p>Let's have a look at how accessibility can be considered when working with forms.</p>
 
           <form action="#" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" minlength="3" required>
             <span class="error" id="nameError" role="alert" aria-live="assertive"></span>
-          
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" maxlength="25" required>
             <span class="error" id="emailError" role="alert" aria-live="assertive"></span>
-          
+
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
               <option value="">--Please choose an option--</option>
@@ -63,12 +56,21 @@
 
             <label for="dob">Date of birth:</label>
             <input type="date" id="dob" name="dob" min="1900-01-01" max="2020-12-31">
-          
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4"></textarea>
-          
+
             <button type="submit">Submit</button>
           </form>
+
+          <p>The form above has been created in order to showcase a number of accessibility aspects with HTML forms. For a simple form like this one, as long as you use HTML5 elements properly, you will reach a decent level of accessibility, without even the need for specific accessibility attributes or added JavaScript.</p>
+          <p>These are some things to point out about the form:</p>
+          <ul>
+            <li><code>&#60;label&#62;</code> elements for all fields associates a field with a label programmatically, which allows screen readers to read out the form properly.</li>
+            <li>By using appropriate input types the browser automatically provides some basic validation and custom controls when filling out the form with a mobile device, e.g. for email adresses.</li>
+            <li>Form field validation can be added by using HTML attributes such as <code>required</code> or <code>minlength</code>, which automatically validates the form on submission and points out errors.</li>
+            <li>Indicating the currently focused element is displayed by default by major browsers, but sometimes the styling for this gets turned off by developers because it is seen as ugly and not fitting with the design of the website. By using the relatively new <code>:focus-visible</code> pseudo class the browser uses some heuristics to determine if focus indication is needed (e.g. when mouse clicking on a button it is not needed, but when keyboard navigating to that button it is).</li>
+          </ul>
       </article>
     </main>
   </body>
